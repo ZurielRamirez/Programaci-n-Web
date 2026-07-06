@@ -1,0 +1,207 @@
+/* --- Variables e Importaciones --- */
+:root {
+    --tecnm-blue: #182c5e; /* El azul marino del fondo */
+    --tecnm-dark-blue: #1c366e; /* Un azul más oscuro para el botón */
+    --panel-bg: #ffffff; /* Fondo blanco del panel */
+    --input-border: #b0bec5; /* Gris suave para los bordes de input */
+    --input-placeholder: #757575; /* Gris para el placeholder */
+    --input-text: #212121; /* Texto de input casi negro */
+    --error: #dc2626; /* Rojo de error */
+    --text-hint: #9e9e9e; /* Gris claro para texto secundario */
+}
+
+/* --- Estilos Generales --- */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Usamos una fuente sans-serif limpia */
+    background-color: var(--tecnm-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- Encabezado de Logos --- */
+.logos-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espacio entre logos */
+    margin-bottom: 30px;
+}
+
+.logo-tecnm {
+    height: 90px;
+    width: auto;
+}
+
+.logo-ito {
+    height: 70px;
+    width: auto;
+}
+
+/* --- Navegación --- */
+.auth-nav {
+    width: 100%;
+    display: flex;
+    background-color: var(--panel-bg);
+    border-radius: 6px 6px 0 0;
+    overflow: hidden;
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 15px 0;
+    text-decoration: none;
+    color: var(--input-placeholder);
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+.nav-item.active {
+    color: var(--tecnm-blue);
+    border-bottom: 3px solid var(--tecnm-blue);
+}
+
+.nav-item:hover {
+    color: var(--tecnm-dark-blue);
+}
+
+/* --- Panel de Autenticación (Contenedor de Formularios) --- */
+.auth-panel {
+    width: 100%;
+    background-color: var(--panel-bg);
+    padding: 30px 40px;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Estilos de Formulario --- */
+.auth-form {
+    display: none; /* Oculto por defecto */
+    width: 100%;
+}
+
+.auth-form.active {
+    display: flex; /* Visible si es activo */
+    flex-direction: column;
+}
+
+.panel-instruction {
+    font-size: 16px;
+    color: var(--input-text);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    color: var(--input-placeholder);
+    margin-bottom: 4px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--input-text);
+}
+
+.form-group input::placeholder {
+    color: var(--input-placeholder);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--tecnm-blue);
+}
+
+.auth-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--tecnm-dark-blue);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.auth-submit:hover {
+    background-color: #1a2a4f;
+}
+
+.error-msg {
+    color: var(--error);
+    font-size: 11px;
+    display: block;
+    margin-top: 5px;
+}
+
+.hint {
+    color: var(--text-hint);
+    font-size: 11px;
+    display: block;
+    margin-top: 4px;
+}
+
+/* --- Estilos de Ventana Modal --- */
+dialog {
+    border: none;
+    border-radius: 6px;
+    padding: 25px 35px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 350px;
+    text-align: center;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+dialog h3 {
+    margin-top: 0;
+    color: var(--tecnm-blue);
+}
+
+.modal-close {
+    background-color: var(--text-hint);
+    margin-top: 15px;
+}
+.modal-close:hover {
+    background-color: #757575;
+}
