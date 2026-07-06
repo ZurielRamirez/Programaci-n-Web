@@ -1,0 +1,64 @@
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: rgb(108, 106, 106); 
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .contenedor-menu {
+            background-color: #ff0084; 
+            width: 90%;
+            max-width: 650px;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #334155; 
+            text-align: center;
+        }
+
+        .contenedor-menu h1 {
+            font-size: 2.8rem;
+            margin: 0 0 5px 0;
+            color: #e9eced; 
+            letter-spacing: 1px;
+        }
+
+        .contenedor-menu h2 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin: 0 0 35px 0;
+            color: #e9eced; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .lista-ejercicios {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; 
+            margin-bottom: 35px;
+        }
+
+        .btn-ejercicio {
+            display: block;
+            background-color: #306dfb; 
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 1rem;
+            border: 1px solid #1e293b;
+            transition: all 0.3s ease; 
+        }
+
+        .creditos {
+            font-size: 0.95rem;
+            color: #e9eced;
+            margin: 0;
+            border-top: 1px solid #334155;
+            padding-top: 20px;
+            letter-spacing: 0.5px;
+        }
