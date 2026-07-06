@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+    <link rel="stylesheet" href="css/Ejercicio10.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Registro de Estudiantes</h2>
+    
+    <div class="form-group">
+        <label for="nombre">Nombre del estudiante:</label>
+        <input type="text" id="nombre" placeholder="Ej. Juan">
+    </div>
+
+    <div class="form-group">
+        <label for="calificacion">Calificación:</label>
+        <input type="text" id="calificacion" placeholder="Ej. 85">
+        <div id="error" class="error-message">Por favor, llena todos los campos con datos válidos.</div>
+    </div>
+
+    <div class="form-group">
+        <button id="btnAgregar" style="background-color: #28a745; margin-bottom: 10px;">Agregar estudiante</button>
+        <button id="btnConvertir">Calcular</button>
+    </div>
+
+    <div class="form-group">
+        <label for="promedio">Calificación Promedio:</label>
+        <input type="text" id="promedio" readonly placeholder="Esperando cálculos...">
+    </div>
+
+    <div class="form-group">
+        <label for="mayor">Calificación más alta:</label>
+        <input type="text" id="mayor" readonly placeholder="Esperando cálculos...">
+    </div>
+
+    <div class="form-group">
+        <label for="menor">Calificación más baja:</label>
+        <input type="text" id="menor" readonly placeholder="Esperando cálculos...">
+    </div>
+
+    <p>Regresar al <a href="index.html">Menú</a></p>
+</div>
+
+<script src="js/Ejercicio15.js"></script>
+
+</body>
+</html>
